@@ -8,7 +8,19 @@ conn = sqlite3.connect('../data/project_database.db')
 cursor = conn.cursor()
 
 cursor.execute("""
-CREATE TABLE IF NOT EXISTS equipement_activites(
+DROP TABLE equipement_activites
+""")
+
+cursor.execute("""
+DROP TABLE equipements
+""")
+
+cursor.execute("""
+DROP TABLE installations
+""")
+
+cursor.execute("""
+CREATE TABLE IF NOT EXISTS activites(
      id INTEGER PRIMARY KEY AUTOINCREMENT UNIQUE,
      name TEXT,
      age INTERGER
