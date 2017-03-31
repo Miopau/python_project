@@ -6,17 +6,24 @@ import sqlite3
 conn = sqlite3.connect('../data/project_database.db')
 
 cursor = conn.cursor()
+
 cursor.execute("""
 CREATE TABLE IF NOT EXISTS equipement_activites(
      id INTEGER PRIMARY KEY AUTOINCREMENT UNIQUE,
      name TEXT,
      age INTERGER
 )
+""")
+
+cursor.execute("""
 CREATE TABLE IF NOT EXISTS equipements(
      id INTEGER PRIMARY KEY AUTOINCREMENT UNIQUE,
      name TEXT,
      age INTERGER
 )
+""")
+
+cursor.execute("""
 CREATE TABLE IF NOT EXISTS installations(
      id INTEGER PRIMARY KEY AUTOINCREMENT UNIQUE,
      name TEXT,
@@ -25,4 +32,4 @@ CREATE TABLE IF NOT EXISTS installations(
 """)
 
 conn.commit()
-db.close()
+conn.close()
