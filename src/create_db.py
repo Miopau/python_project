@@ -1,8 +1,15 @@
 #!/usr/bin/python3
 # -*- coding: utf-8 -*-
 
-import sqlite3, os
+import sqlite3, os, activity, equipement,installations
 
+"""
+    Main function who:
+        - create database
+        - drop all TABLES
+        - create new TABLES
+        - fill TABLES whith clean data
+"""
 def main():
     dir_path = os.path.dirname(os.path.realpath(__file__))
     try:
@@ -24,13 +31,20 @@ def main():
     finally:
         conn.close()
 
-
+"""
+    function to clean all tables in database
+    :param cursor: cursor of the database
+"""
 def clean(cursor):
     cursor.execute("""DROP TABLE IF EXISTS activity_equipement""")
     cursor.execute("""DROP TABLE IF EXISTS installation""")
     cursor.execute("""DROP TABLE IF EXISTS equipement""")
     cursor.execute("""DROP TABLE IF EXISTS activity""")
 
+"""
+    function to create all tables in database
+    :param cursor: cursor of the database
+"""
 def create(cursor):
     cursor.execute("""
     CREATE TABLE IF NOT EXISTS activity_equipement(
