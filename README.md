@@ -30,3 +30,6 @@ Module 3 (test de la base) :
 
 Git Doc:
 https://github.com/Kunena/Kunena-Forum/wiki/Create-a-new-branch-with-git-and-manage-branches
+
+SQLLite Doc:
+http://apprendre-python.com/page-database-data-base-donnees-query-sql-mysql-postgre-sqlite
