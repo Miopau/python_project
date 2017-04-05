@@ -13,10 +13,6 @@ class Activity:
         """
         Construct function of the class
         """
-        self.code_postale = code_postale
-        self.nom_commune = nom_commune
-        self.equipement_id = equipement_id
-        self.nb_equipement = nb_equipement
         self.activityID = activityID
         self.activityName = activityName
 
@@ -30,5 +26,5 @@ class Activity:
         with open("../initial/activites.csv","r") as file:
             reader = csv.reader(file)
             for row in reader:
-                activiteList.append(Activite(row[0],row[1],row[2],row[3],row[4],row[5]));
+                activiteList.append(Activite(row[4],row[5]));
             return activityList #Return the list of activity
