@@ -1,47 +1,52 @@
-#!/usr/bin/python
+#!/usr/bin/python3
 # -*- coding: utf-8 -*-
 
-import sqlite3
+import sqlite3, os
 
-conn = sqlite3.connect('../data/project_database.db')
+def main():
+    dir_path = os.path.dirname(os.path.realpath(__file__))
+    conn = sqlite3.connect('{}/../data/project_database.db'.format(dir_path))
+    cursor = conn.cursor()
 
-cursor = conn.cursor()
+    #cleaning database
+    clean(cursor)
 
-cursor.execute("""
-DROP TABLE equipement_activites
-""")
+    #create TABLE
+    create(cursor)
 
-cursor.execute("""
-DROP TABLE equipements
-""")
+    conn.commit()
+    conn.close()
 
-cursor.execute("""
-DROP TABLE installations
-""")
+def clean(cursor):
+    cursor.execute("""DROP TABLE IF EXISTS equipement_activite""")
+    cursor.execute("""DROP TABLE IF EXISTS installations""")
+    cursor.execute("""DROP TABLE IF EXISTS equipement""")
+    cursor.execute("""DROP TABLE IF EXISTS activite""")
 
-cursor.execute("""
-CREATE TABLE IF NOT EXISTS activites(
-     id INTEGER PRIMARY KEY AUTOINCREMENT UNIQUE,
-     name TEXT,
-     age INTERGER
-)
-""")
+def create(cursor):
+    cursor.execute("""
+    CREATE TABLE IF NOT EXISTS activite(
+         id INTEGER PRIMARY KEY AUTOINCREMENT UNIQUE,
+         name TEXT,
+         age INTERGER
+    )
+    """)
 
-cursor.execute("""
-CREATE TABLE IF NOT EXISTS equipements(
-     id INTEGER PRIMARY KEY AUTOINCREMENT UNIQUE,
-     name TEXT,
-     age INTERGER
-)
-""")
+    cursor.execute("""
+    CREATE TABLE IF NOT EXISTS equipement(
+         id INTEGER PRIMARY KEY AUTOINCREMENT UNIQUE,
+         name TEXT,
+         age INTERGER
+    )
+    """)
 
-cursor.execute("""
-CREATE TABLE IF NOT EXISTS installations(
-     id INTEGER PRIMARY KEY AUTOINCREMENT UNIQUE,
-     name TEXT,
-     age INTERGER
-)
-""")
+    cursor.execute("""
+    CREATE TABLE IF NOT EXISTS installation(
+         id INTEGER PRIMARY KEY AUTOINCREMENT UNIQUE,
+         name TEXT,
+         age INTERGER
+    )
+    """)
 
-conn.commit()
-conn.close()
+if __name__ == "__main__":
+    main()
