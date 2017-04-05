@@ -23,12 +23,12 @@ class Equipement:
     equipementList = []
 
 
-    def readCSV():
-        """
-        Function that read the csv and create Installation list
-        """
-        with open("../initial/equipements.csv","r") as file:
-            reader = csv.reader(file)
-            for row in reader:
-                equipementList.append(equipementList(row[2],row[4],row[5]));
-            return equipementList #Return the list of equipement
+def readCSV():
+    """
+    Function that read the csv and create Installation list
+    """
+    with open("../initial/equipements.csv","r") as file:
+        reader = csv.reader(file)
+        for row in reader:
+            equipementList.append(equipementList(row[2],row[4],row[5]));
+        return equipementList #Return the list of equipement

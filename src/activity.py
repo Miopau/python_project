@@ -19,12 +19,12 @@ class Activity:
     #Initialisation of the list
     activityList = []
 
-    def readCSV():
-        """
-        Function that read the csv and create Activity list
-        """
-        with open("../initial/activites.csv","r") as file:
-            reader = csv.reader(file)
-            for row in reader:
-                activiteList.append(Activite(row[4],row[5]));
-            return activityList #Return the list of activity
+def readCSV():
+    """
+    Function that read the csv and create Activity list
+    """
+    with open("../initial/activites.csv","r") as file:
+        reader = csv.reader(file)
+        for row in reader:
+            activiteList.append(Activite(row[4],row[5]));
+        return activityList #Return the list of activity
