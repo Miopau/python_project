@@ -24,5 +24,3 @@ def readCSV():
         reader = csv.reader(file)
         for row in reader:
             activiteList.append(Activite(row[0],row[1],row[2],row[3],row[4],row[5]));
-        for elt in activiteList:
-            elt.toString();
