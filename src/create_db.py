@@ -26,30 +26,30 @@ def main():
 
 
 def clean(cursor):
-    cursor.execute("""DROP TABLE IF EXISTS equipement_activite""")
+    cursor.execute("""DROP TABLE IF EXISTS activity_equipement""")
     cursor.execute("""DROP TABLE IF EXISTS installation""")
     cursor.execute("""DROP TABLE IF EXISTS equipement""")
-    cursor.execute("""DROP TABLE IF EXISTS activite""")
+    cursor.execute("""DROP TABLE IF EXISTS activity""")
 
 def create(cursor):
     cursor.execute("""
-    CREATE TABLE IF NOT EXISTS equipement_activite(
+    CREATE TABLE IF NOT EXISTS activity_equipement(
          id INTEGER PRIMARY KEY AUTOINCREMENT UNIQUE,
-         numero_equipement INTEGER,
-         numero_activite INTERGER,
-         FOREIGN KEY(numero_equipement) REFERENCES equipement(numero),
-         FOREIGN KEY(numero_activite) REFERENCES activite(numero)
+         equipement_number INTEGER,
+         activity_number INTERGER,
+         FOREIGN KEY(equipement_number) REFERENCES equipement(number),
+         FOREIGN KEY(activity_number) REFERENCES activity(number)
     )
     """)
 
     cursor.execute("""
     CREATE TABLE IF NOT EXISTS installation(
          id INTEGER PRIMARY KEY AUTOINCREMENT UNIQUE,
-         numero INTEGER,
-         nom TEXT,
-         adresse TEXT,
-         code_postal TEXT,
-         ville TEXT,
+         number INTEGER,
+         name TEXT,
+         adress TEXT,
+         zip_code TEXT,
+         city TEXT,
          latitude DECIMAL,
          longitude DECIMAL
     )
@@ -58,17 +58,17 @@ def create(cursor):
     cursor.execute("""
     CREATE TABLE IF NOT EXISTS equipement(
          id INTEGER PRIMARY KEY AUTOINCREMENT UNIQUE,
-         nom TEXT,
-         numero_installation INTERGER,
-         FOREIGN KEY(numero_installation) REFERENCES installation(numero)
+         name TEXT,
+         installation_number INTERGER,
+         FOREIGN KEY(installation_number) REFERENCES installation(number)
     )
     """)
 
     cursor.execute("""
-    CREATE TABLE IF NOT EXISTS activite(
+    CREATE TABLE IF NOT EXISTS activity(
          id INTEGER PRIMARY KEY AUTOINCREMENT UNIQUE,
-         numero INTEGER,
-         nom TEXT
+         number INTEGER,
+         name TEXT
     )
     """)
 
