@@ -25,6 +25,7 @@ def main():
 
         liste_equipement =[2,4,5]
         readcsv("../initial/equipements.csv",liste_equipement)
+        
 
         conn.commit()
     except Exception as e:
