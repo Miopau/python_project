@@ -29,15 +29,15 @@ class Installation:
         self.latitude = latitude
         self.disabledAdapted = disabledAdapted
 
-    #Initialisation of the list
-    installationList = []
-
-def readCSV():
-    """
-    Function that read the csv and create Equipment list
-    """
-    with open("../initial/installations.csv","r") as file:
-        reader = csv.reader(file)
-        for row in reader:
-            installationList.append(installation(row[0],row[1],row[2],row[4],row[5]+" "+row[6],row[9],row[10], row[12]));
-        return installationList #Return the list of installation
+#     #Initialisation of the list
+#     installationList = []
+#
+# def readCSV():
+#     """
+#     Function that read the csv and create Equipment list
+#     """
+#     with open("../initial/installations.csv","r") as file:
+#         reader = csv.reader(file)
+#         for row in reader:
+#             installationList.append(installation(row[0],row[1],row[2],row[4],row[5]+" "+row[6],row[9],row[10], row[12]));
+#         return installationList #Return the list of installation

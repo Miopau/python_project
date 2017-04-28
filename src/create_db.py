@@ -1,7 +1,8 @@
 #!/usr/bin/python3
 # -*- coding: utf-8 -*-
 
-import sqlite3, os, activity, equipement,installations
+import sqlite3, os, Activity, Equipement,Installation
+from readCSV import readcsv
 
 """
     Main function who:
@@ -21,6 +22,9 @@ def main():
 
         #create TABLE
         create(cursor)
+
+        liste_equipement =[2,4,5]
+        readcsv("../initial/equipements.csv",liste_equipement)
 
         conn.commit()
     except Exception as e:
