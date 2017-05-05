@@ -13,9 +13,5 @@ class Activity:
         """
         Construct function of the class
         """
-        self.code_postale = code_postale
-        self.nom_commune = nom_commune
-        self.equipement_id = equipement_id
-        self.nb_equipement = nb_equipement
         self.activityID = activityID
         self.activityName = activityName
