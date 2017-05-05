@@ -25,15 +25,15 @@ def main():
 
         #create objetc list of installation
         l_installation =[]
-        # l_installation = readcsv_installation()
+        l_installation = readcsv_installation()
 
         #create objetc list of equipement
         l_equipement =[]
-        # l_equipement= readcsv_equipement()
+        l_equipement= readcsv_equipement()
 
         #create objetc list of installation
         l_activity =[]
-        # l_activity= readcsv_activity()
+        l_activity= readcsv_activity()
 
 
         conn.commit()
