@@ -1,7 +1,5 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-#Importation of the csv library
-import csv
 
 class Installation:
     """
