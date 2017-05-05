@@ -116,12 +116,6 @@ def create(cursor):
 """
 def insert(cursor,list_activity,list_equipment,list_installation,list_activity_equipement):
 
-    #INSERT INTO users(name, age) VALUES(?, ?)""", ("olivier", 30)
-
-    #data = {"name" : "olivier", "age" : 30}
-    #cursor.execute("""
-    #INSERT INTO users(name, age) VALUES(:name, :age)""", data)
-
     for obj in list_installation:
         #insert to installation
         cursor.execute("""
