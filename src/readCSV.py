@@ -17,7 +17,7 @@ def readcsv_activity():
     activityList = []
     with open("../initial/activites.csv","r") as file:
         reader = csv.reader(file)
-        for row in reader:
+        for row in reader: 
             activityList.append(Activity(row[4],row[5]))
     return activityList #Return the list of activity
 
