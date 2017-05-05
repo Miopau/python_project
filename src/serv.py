@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-from bottle import get, post, request, run, route, template, static_file
+from ../lib/bottle import get, post, request, run, route, template, static_file
 
 
 @get('/index')
