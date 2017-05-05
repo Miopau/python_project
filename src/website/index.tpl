@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Theme Preview - Usebootstrap.com</title>
+    <title>SportsMap - Accueil</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="website/theme/bootstrap.css" media="screen">
     <link rel="stylesheet" href="website/theme/usebootstrap.css">
@@ -17,11 +17,11 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="/"><span class="glyphicon glyphicon-map-marker"></span> SportsMap <small>beta</small></a>
+                <a class="navbar-brand" href="/index"><span class="glyphicon glyphicon-map-marker"></span> SportsMap <small>beta</small></a>
             </div>
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
-                    <li><a href="/dashboard">lorem ipsum</a></li>
+                    <li><a href="/search">Rechercher</a></li>
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">A propos <b class="caret"></b></a>
                         <ul class="dropdown-menu">
@@ -39,7 +39,7 @@
         		<div class="col-md-5">
         			<h3>Effectuez votre première recherche en toute simplicité !</h3>
         			<p>SportsMap vous permet de trouvez des installations sportives de la manière la plus simple au monde. Il vous suffit de renseigner quelques informations et SportsMap vous offrira des solutions adaptés à vos besoins.</p>
-        			<a href="/dashboard/createlauncher"><button class="btn btn-block btn-primary">Effectuez votre première recherche !</button></a>
+        			<a href="/search"><button class="btn btn-block btn-primary">Effectuez votre première recherche !</button></a>
         		</div>
         	</div>
 
