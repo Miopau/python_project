@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 
 import sqlite3, os, Activity, Equipement,Installation
-from readCSV import readcsv
+from readCSV import readcsv_installation,readcsv_equipement,readcsv_activity
 
 """
     Main function who:
@@ -23,9 +23,18 @@ def main():
         #create TABLE
         create(cursor)
 
-        liste_equipement =[2,4,5]
-        readcsv("../initial/equipements.csv",liste_equipement)
-        
+        #create objetc list of installation
+        l_installation =[]
+        l_installation = readcsv_installation()
+
+        #create objetc list of equipement
+        l_equipement =[]
+        l_equipement= readcsv_equipement()
+
+        #create objetc list of installation
+        l_activity =[]
+        l_activity= readcsv_activity()
+
 
         conn.commit()
     except Exception as e:
