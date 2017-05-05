@@ -6,7 +6,17 @@ from Installation import Installation
 from Activity import Activity
 from Activity_Equipement import Activity_Equipement
 
+
+"""
+Function to read installation.csv file and create a list
+of installation object to fill the database
+"""
+
 def readcsv_installation():
+    """
+    >>> not readcsv_installation()
+    False
+    """
     installationList = []
     with open("../../initial/installations.csv","r") as file:
         reader = csv.reader(file)
@@ -14,14 +24,22 @@ def readcsv_installation():
             installationList.append(Installation(row[0],row[1],row[2],row[4],row[5]+" "+row[6],row[9],row[10], row[12]))
     return installationList #Return the list of installation
 
+"""
+    Function to read activiy.csv file and create a list
+    of activity object to fill the database
+"""
 def readcsv_activity():
     activityList = []
-    with open("../../initial/activites.csv","r") as file:
+    with open("../../initial/activity.csv","r") as file:
         reader = csv.reader(file)
         for row in reader:
             activityList.append(Activity(row[4],row[5]))
     return activityList #Return the list of activity
 
+"""
+    Function to read equipements.csv file and create a list
+    of equipement object to fill the database
+"""
 def readcsv_equipement():
     equipementList=[]
     with open("../../initial/equipements.csv","r") as file:
@@ -30,9 +48,13 @@ def readcsv_equipement():
             equipementList.append(Equipement(row[2],row[4],row[5]))
     return equipementList #Return the list of equipement
 
+"""
+    Function to read activity.csv file and create a list
+    of activity_equipement object to fill the database
+"""
 def create_activity_equipement_list():
     activity_equipementList = []
-    with open("../../initial/activites.csv","r") as file:
+    with open("../../initial/activity.csv","r") as file:
         reader = csv.reader(file)
         for row in reader:
             activity_equipementList.append(Activity_Equipement(row[2],row[4]))
