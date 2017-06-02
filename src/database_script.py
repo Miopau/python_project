@@ -66,8 +66,39 @@ def list_activity():
         conn.close()
         return list
 
+"""
+    function to get all city from activity
+    :return: list of city
+"""
+def get_city(activity):
+    try:
+        conn = sqlite3.connect('{}/../data/project_database.db'.format(dir_path))
+        cursor = conn.cursor()
+
+        cursor.execute("""SELECT distinct name,city,adress,zip_code FROM installation where
+        number in (SELECT installation_number from equipement where
+        number in (SELECT equipement_number number from activity_equipement where
+        activity_number in (SELECT number from activity where name LIKE ?)))""", (activity,))
+
+        for row in cursor:
+            l = []
+            l.append(row[0])
+            l.append(row[1])
+            l.append(row[2])
+            l.append(row[3])
+            list.append(l)
+
+    except Exception as e:
+        print("ERREUR:")
+        print (e)
+        print ("\n")
+
+    finally:
+        conn.close()
+        return list
+
 if __name__ == "__main__":
-    l= find_activity_from_city_zip_code("Nantes")
+    l= get_city("aviron")
     for row in l:
         print(row)
 
