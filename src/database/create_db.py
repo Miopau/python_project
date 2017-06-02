@@ -45,7 +45,7 @@ def main():
 
         conn.commit()
     except Exception as e:
-        print("ERREUR:")
+        print("ERROR:")
         print (e)
         print ("\n")
 
