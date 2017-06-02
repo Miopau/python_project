@@ -32,9 +32,50 @@
             </div>
         </nav>
 <div class="container">
+    <div id="carousel-example" class="carousel slide" data-ride="carousel">
+  <ol class="carousel-indicators">
+    <li data-target="#carousel-example" data-slide-to="0" class="active"></li>
+    <li data-target="#carousel-example" data-slide-to="1"></li>
+    <li data-target="#carousel-example" data-slide-to="2"></li>
+  </ol>
+
+  <div class="carousel-inner">
+    <div class="item active">
+      <a href="#"><img src="website/img/paysloire.png" /></a>
+      <div class="carousel-caption">
+        <h3>Un service</h3>
+        <p>basé sur les bases de données de la région.</p>
+      </div>
+    </div>
+    <div class="item">
+      <a href="#"><img src="http://placekitten.com/1600/600" /></a>
+      <div class="carousel-caption">
+        <h3>Meow</h3>
+        <p>Just Kitten Around</p>
+      </div>
+    </div>
+    <div class="item">
+      <a href="#"><img src="http://placekitten.com/1600/600" /></a>
+      <div class="carousel-caption">
+        <h3>Meow</h3>
+        <p>Just Kitten Around</p>
+      </div>
+    </div>
+  </div>
+
+  <a class="left carousel-control" href="#carousel-example" data-slide="prev">
+    <span class="glyphicon glyphicon-chevron-left"></span>
+  </a>
+  <a class="right carousel-control" href="#carousel-example" data-slide="next">
+    <span class="glyphicon glyphicon-chevron-right"></span>
+  </a>
+</div>
+
+<hr/>
+
         <div class="row">
         		<div class="col-md-7">
-        			<img style="max-width: 100%" src="website/img/gymnase.jpg"/>
+        			<img style="max-width: 100%" src="website/img/gymnase.png"/>
         		</div>
         		<div class="col-md-5">
         			<h3>Effectuez votre première recherche en toute simplicité !</h3>
@@ -85,6 +126,15 @@
 			</div>
 		</div>
 	</div>
+</div>
+
+<div class="footer" style="clear: both;">
+   <small>
+      <center>
+         <hr/>
+         Le site utilise <a href="http://getbootstrap.com" target="_blank">Bootstrap</a> ainsi que le thème <a target="_blank" href="http://bootswatch.com/yeti/">Yeti</a>. 
+         <br/>Développé par <a href ="https://www.linkedin.com/in/florian-vallet-593020120/" target="_blank">Florian Vallet</a> et <a href ="http://matthieubernard.me" target="_blank">Matthieu Bernard</a> !<br/>
+   </small>
 </div>
 
 

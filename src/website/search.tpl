@@ -35,21 +35,22 @@
           <h1>Rechercher une installation</h1>
         </div>
 
-        <form class="form-horizontal" action="/post" method="get">
+        <form class="form-horizontal" action="search" method="post">
           <fieldset>
             <legend>Rechercher</legend>
             <div class="form-group">
               <label for="select" class="col-lg-2 control-label">Activité</label>
               <div class="col-lg-10">
-                <select class="form-control" id="activite">
+                <select class="form-control" name="activite">
                   <option>Football</option>
-                  <option>Caca</option>
-                  <option>3</option>
-                  <option>4</option>
-                  <option>5</option>
+                  <option>VolleyBall</option>
+                  <option>Tennis</option>
+                  <option>Rugby</option>
+                  <option>Curling</option>
                 </select>
               </div>
             </div>
+
             <div class="form-group">
               <div class="col-lg-10 col-lg-offset-2">
                 <button type="submit" class="btn btn-primary">Submit</button>
@@ -57,6 +58,8 @@
             </div>
           </fieldset>
         </form>
+        {{activite}}
       </div>
+
    </body>
 </html>
