@@ -6097,3 +6097,7 @@ label,
     font-variant: small-caps;
     text-align: center;
 }
+
+.borders {
+    border-right: 1px solid #ddd;
+}
