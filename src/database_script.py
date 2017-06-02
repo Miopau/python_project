@@ -96,12 +96,3 @@ def get_city(activity):
     finally:
         conn.close()
         return list
-
-if __name__ == "__main__":
-    l= get_city("aviron")
-    for row in l:
-        print(row)
-
-    # ll= list_activity()
-    # for row in ll:
-    #     print(row)
