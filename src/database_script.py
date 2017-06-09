@@ -96,3 +96,27 @@ def get_city(activity):
     finally:
         conn.close()
         return list
+
+"""
+    function to get latitude and longitude for activity
+    :return: list latitude and longitude
+"""
+def get_coord(city,adress,zipcode,name):
+    try:
+        conn = sqlite3.connect('{}/../data/project_database.db'.format(dir_path))
+        cursor = conn.cursor()
+
+        cursor.execute("""SELECT latitude, longitude FROM installation
+        where city=? and adress=? and zipcode=? and name=?""", (city,adress,zipcode,name,))
+
+        for row in cursor:
+            list.append(row)
+
+    except Exception as e:
+        print("ERREUR:")
+        print (e)
+        print ("\n")
+
+    finally:
+        conn.close()
+        return list
