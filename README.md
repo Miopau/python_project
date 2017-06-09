@@ -42,17 +42,17 @@ http://apprendre-python.com/page-database-data-base-donnees-query-sql-mysql-post
 #### Partie 1 :
 
 Module 1 (import des données) :
-        * définit quelques classes simples (une pour Installation, Equipement,Activité)
-        * lit les fichiers CSV / JSON
-        * créé un objet pour chaque élément du fichier
+  * définit quelques classes simples (une pour Installation, Equipement,Activité)
+  * lit les fichiers CSV / JSON
+  * créé un objet pour chaque élément du fichier
 
 #### Partie 2 :
 
 Module 1 (administration de la base) :
-        * supprime si existe puis créé une base de données SQLite
+  * supprime si existe puis créé une base de données SQLite
 
 Module 2 (import des données) :
-        * les objets sont insérés en base
+  * les objets sont insérés en base
 
 Module 3 (test de la base) :
-        * lit les objets en base et affiche leur contenu
+  * lit les objets en base et affiche leur contenu
