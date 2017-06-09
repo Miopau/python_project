@@ -17,7 +17,7 @@ def do_post():
     if res is None:
         return template('website/result', liste = find_activity_from_city_zip_code(request.forms.get('city')))
     else:
-        return template('website/result', liste = get_city(request.forms.get('var')))
+        return template('website/result', liste = get_city(request.forms.get('activity')))
 
 @route("/website/theme/<filename>")
 def style(filename):

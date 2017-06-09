@@ -120,3 +120,7 @@ def get_coord(city,adress,zipcode,name):
     finally:
         conn.close()
         return list
+
+if __name__ == "__main__":
+    for e in get_city("aviron"):
+        print (e)
