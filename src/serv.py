@@ -2,6 +2,7 @@
 # -*- coding: utf-8 -*-
 from bottle import get, post, request, run, route, template, static_file
 from database_script import list_activity, find_activity_from_city_zip_code, get_city
+
 @get('/index')
 def index():
     return template('website/index')
