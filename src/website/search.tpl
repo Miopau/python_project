@@ -64,11 +64,11 @@
     <div class="col-md-6">
             <form class="form-horizontal" action="result" method="post">
                 <fieldset>
-                    <legend>Recherche par ville</legend>
+                    <legend>Recherche par Ville ou Code Postal</legend>
                     <div class="form-group">
                         <label for="example-text-input" class="col-lg-2 control-label">Ville</label>
                         <div class="col-lg-10">
-                            <input class="form-control" type="text" id="example-text-input" name="var">
+                            <input class="form-control" type="text" id="example-text-input" name="city">
                         </div>
                     </div>
                     <div class="form-group">

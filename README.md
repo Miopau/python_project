@@ -1,7 +1,7 @@
 # python_project
 
 Project Doc:
-http://nsal.im/iut/techno/#/
+http://nsal.im/iut/techno/#/ <br/>
 https://github.com/sebprunier/installations-sportives-pdl
 
 
@@ -28,8 +28,8 @@ Module 3 (test de la base) :
         => lit les objets en base et affiche leur contenu
 
 
-Git Doc:
+Git Doc: <br/>
 https://github.com/Kunena/Kunena-Forum/wiki/Create-a-new-branch-with-git-and-manage-branches
 
-SQLLite Doc:
+SQLLite Doc: <br/>
 http://apprendre-python.com/page-database-data-base-donnees-query-sql-mysql-postgre-sqlite
