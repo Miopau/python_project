@@ -5,14 +5,14 @@
 import sqlite3, os, Activity, Equipement,Installation
 from readCSV import readcsv_installation,readcsv_equipement,readcsv_activity,create_activity_equipement_list
 
-"""
-    Main function who:
-        - create database
-        - drop all TABLES
-        - create new TABLES
-        - fill TABLES whith clean data
-"""
 def main():
+    """
+    Main function who:
+    - create database
+    - drop all TABLES
+    - create new TABLES
+    - fill TABLES whith clean data
+    """
     dir_path = os.path.dirname(os.path.realpath(__file__))
     try:
         conn = sqlite3.connect('{}/../../data/project_database.db'.format(dir_path))
@@ -52,21 +52,21 @@ def main():
     finally:
         conn.close()
 
-"""
+def clean(cursor):
+    """
     function to clean all tables in database
     :param cursor: cursor of the database
-"""
-def clean(cursor):
+    """
     cursor.execute("""DROP TABLE IF EXISTS activity_equipement""")
     cursor.execute("""DROP TABLE IF EXISTS installation""")
     cursor.execute("""DROP TABLE IF EXISTS equipement""")
     cursor.execute("""DROP TABLE IF EXISTS activity""")
 
-"""
+def create(cursor):
+    """
     function to create all tables in database
     :param cursor: cursor of the database
-"""
-def create(cursor):
+    """
     cursor.execute("""
     CREATE TABLE IF NOT EXISTS activity_equipement(
          id INTEGER PRIMARY KEY AUTOINCREMENT UNIQUE,
@@ -109,14 +109,14 @@ def create(cursor):
     )
     """)
 
-"""
+def insert(cursor,list_activity,list_equipment,list_installation,list_activity_equipement):
+    """
     function to insert all data in table
     :param cursor: cursor of the database
     :param list_activity: list of activity object to parse
     :param list_equipment: list of equipment object to parse
     :param list_installation: list of installation object to parse
-"""
-def insert(cursor,list_activity,list_equipment,list_installation,list_activity_equipement):
+    """
 
     for obj in list_installation:
         #insert to installation

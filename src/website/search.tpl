@@ -43,9 +43,9 @@
                 <div class="form-group">
                     <label for="select" class="col-lg-2 control-label">Activité</label>
                     <div class="col-lg-10">
-                        <select class="form-control" name="activity">
-                            %for obj in list:
-                                <option>{{obj}}</option>
+                        <select class="form-control" name="activities">
+                            %for result in activity:
+                                <option>{{result}}</option>
                             %end
 
                         </select>
@@ -81,5 +81,14 @@
     </div>
 </div>
 </div>
+
+<div class="footer" style="clear: both;">
+   <small>
+      <center>
+         <hr/>
+         Le site utilise <a href="http://getbootstrap.com" target="_blank">Bootstrap</a> ainsi que le thème <a target="_blank" href="http://bootswatch.com/yeti/">Yeti</a>.
+         <br/>Développé par <a href ="https://www.linkedin.com/in/florian-vallet-593020120/" target="_blank">Florian Vallet</a> et <a href ="http://matthieubernard.me" target="_blank">Matthieu Bernard</a> !<br/>
+   </small>
+
 </body>
 </html>

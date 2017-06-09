@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html xmlns="http://www.w3.org/1999/html">
 <head>
     <meta charset="utf-8">
     <title>SportsMap - Recherche</title>
@@ -30,23 +30,42 @@
         </ul>
     </div>
 </nav>
+<div>
+    <div class = container>
 
-<div class="media">
-  <div class="media-left">
-    <a href="#">
-      <img class="media-object" src="..." alt="...">
-    </a>
-  </div>
-  <div class="media-body">
-    <h4 class="media-heading">Nom de ville</h4>
-    ...
-  </div>
+     <div class="page-header">
+        <h1>Résultat de la recherche</h1>
+    </div>
+
+    %for result in listeResult:
+        %if len(result) == 4:
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    <span class="glyphicon glyphicon-home"></span><h3>{{result[0]}}</h3></br>
+                    <p>{{result[1]}}</p>
+                    <p>{{result[2]}}</p>
+                    <p>{{result[3]}}</p>
+
+                </div>
+            </div>
+        %else:
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    <span class="glyphicon glyphicon-tower"></span><h3>{{result}}</h3></br>
+                </div>
+            </div>
+    %end
+
+</div>
 </div>
 
-
-%for elem in liste:
-    <p>{{elem}}</p>
-%end
+<div class="footer" style="clear: both;">
+   <small>
+      <center>
+         <hr/>
+         Le site utilise <a href="http://getbootstrap.com" target="_blank">Bootstrap</a> ainsi que le thème <a target="_blank" href="http://bootswatch.com/yeti/">Yeti</a>.
+         <br/>Développé par <a href ="https://www.linkedin.com/in/florian-vallet-593020120/" target="_blank">Florian Vallet</a> et <a href ="http://matthieubernard.me" target="_blank">Matthieu Bernard</a> !<br/>
+   </small>
 
 </body>
 </html>
