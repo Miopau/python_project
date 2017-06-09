@@ -24,26 +24,28 @@ def main():
         #create TABLE
         create(cursor)
 
-        #create objetc list of installation
+        #create object list of installation
         l_installation =[]
         l_installation = readcsv_installation()
 
-        #create objetc list of equipement
+        #create object list of equipement
         l_equipement =[]
         l_equipement= readcsv_equipement()
 
-        #create objetc list of installation
+        #create object list of installation
         l_activity =[]
         l_activity= readcsv_activity()
 
+        #create object list of activity_equipement
         l_activity_equipement = []
         l_activity_equipement = create_activity_equipement_list()
 
+        # Insert all data in database
         insert(cursor,l_activity,l_equipement,l_installation,l_activity_equipement)
 
         conn.commit()
     except Exception as e:
-        print("ERREUR:")
+        print("ERROR:")
         print (e)
         print ("\n")
 
