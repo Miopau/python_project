@@ -30,15 +30,14 @@
         </ul>
     </div>
 </nav>
-<div class = container>
+<div>
+    <div class = container>
 
      <div class="page-header">
         <h1>Résultat de la recherche</h1>
     </div>
 
-
     %for elem in liste:
-    %print(len(elem))
         %if len(elem) == 4:
             <div class="panel panel-default">
                 <div class="panel-body">
@@ -57,6 +56,7 @@
             </div>
     %end
 
+</div>
 </div>
 </body>
 </html>
