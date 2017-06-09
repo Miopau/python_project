@@ -37,24 +37,26 @@
     </div>
 
 
-
-    <div class="panel panel-default">
-      <div class="panel-body">
-          <h3>Saint Nazaire</h3></br>
-          <p>44560 15 rue du sport</p>
-      </div>
-    </div>
-
     %for elem in liste:
-        %for obj in elem:
+    %print(len(elem))
+        %if len(elem) == 4:
             <div class="panel panel-default">
                 <div class="panel-body">
-                    <span class="pull-left glyphicon glyphicon-home"></span><h3>{{obj[0]}}</h3></br>
-                    <p>{{obj[1]}}</p>
+                    <span class="glyphicon glyphicon-home"></span><h3>{{elem[0]}}</h3></br>
+                    <p>{{elem[1]}}</p>
+                    <p>{{elem[2]}}</p>
+                    <p>{{elem[3]}}</p>
+
                 </div>
             </div>
-        %end
+        %else:
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    <span class="glyphicon glyphicon-tower"></span><h3>{{elem}}</h3></br>
+                </div>
+            </div>
     %end
+
 </div>
 </body>
 </html>
