@@ -11,19 +11,19 @@ L'objectif est de développer une application manipulant des données relatives 
 ## Faire fonctionner le projet
 Afin de démarrer notre interface il faut tout d'abord clonner ce projet.
 ```
-        git clone https://github.com/Miopau/python_project.git
+ git clone https://github.com/Miopau/python_project.git
 ```
 
 Ensuite afin creer la base de données et de la replir il faut se placer dans le dossier src/database/ puis executer le script create_db.py. La base de donnée SQLite se trouvera une fois créée dans data/
 
 ```
-        python3 create_db.py
+ python3 create_db.py
 ```
 Si vous voulez mettre à jour les données il suffit de remplacer les 3 fichier CSV placé dans initial/ <br/>
 
 Maintenant il faut lancer le serveur. Se placer dans src/ et lancer le script serv.py
 ```
-        python3 serv.py
+ python3 serv.py
 ```
 
 Vous pouvez maintenant vous connecter à l'adresse suivante http://localhost:8085/index et naviguer sur le site.
