@@ -32,7 +32,7 @@ Vous pouvez maintenant vous connecter à l'adresse suivante http://localhost:808
 
 ### Documentation du projet:
 Cours: <br/> http://nsal.im/iut/techno/#/ <br/>
-Doc: <br/> https://github.com/sebprunier/installations-sportives-pdl
+Doc: <br/> https://github.com/sebprunier/installations-sportives-pdl<br/>
 SQLLite Doc: <br/>
 http://apprendre-python.com/page-database-data-base-donnees-query-sql-mysql-postgre-sqlite
 
