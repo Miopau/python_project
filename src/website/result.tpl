@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html xmlns="http://www.w3.org/1999/html">
 <head>
     <meta charset="utf-8">
     <title>SportsMap - Recherche</title>
@@ -30,23 +30,29 @@
         </ul>
     </div>
 </nav>
+<div class = container>
 
-<div class="media">
-  <div class="media-left">
-    <a href="#">
-      <img class="media-object" src="..." alt="...">
-    </a>
-  </div>
-  <div class="media-body">
-    <h4 class="media-heading">Nom de ville</h4>
-    ...
-  </div>
+     <div class="page-header">
+        <h1>Résultat de la recherche</h1>
+    </div>
+
+
+
+    <div class="panel panel-default">
+      <div class="panel-body">
+          <h3>Saint Nazaire</h3></br>
+          <p>44560 15 rue du sport</p>
+      </div>
+    </div>
+
+    %for elem in liste:
+        <div class="panel panel-default">
+            <div class="panel-body">
+                <span class="pull-left glyphicon glyphicon-home"></span><h3>{{elem[O]}}</h3></br>
+                <p>elem[1]</p>
+            </div>
+        </div>
+    %end
 </div>
-
-%for elem in liste:
-    print elem
-    <p>{{elem}}</p>
-%end
-
 </body>
 </html>

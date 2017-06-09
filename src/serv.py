@@ -13,7 +13,6 @@ def index():
 @post('/result')
 def do_post():
     res = request.forms.get('var')
-    print res
     if res is None:
         return template('website/result', liste = find_activity_from_city_zip_code(request.forms.get('city')))
     else:
