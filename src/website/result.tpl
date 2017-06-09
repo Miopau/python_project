@@ -43,8 +43,8 @@
   </div>
 </div>
 
+
 %for elem in liste:
-    print elem
     <p>{{elem}}</p>
 %end
 
