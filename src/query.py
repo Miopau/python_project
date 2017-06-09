@@ -8,12 +8,13 @@ import sqlite3, os
 dir_path = os.path.dirname(os.path.realpath(__file__))
 list = []
 
-"""
-    function to get all activity from selected city or zip code
-    :param var: city or zip code
-    :return: list of activity
-"""
+
 def find_activity_from_city_zip_code(var):
+    """
+        function to get all activity from selected city or zip code
+        :param var: city or zip code
+        :return: list of activity
+    """
     try:
         conn = sqlite3.connect('{}/../data/project_database.db'.format(dir_path))
         cursor = conn.cursor()
