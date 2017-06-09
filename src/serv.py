@@ -25,7 +25,7 @@ def do_post():
         function than return the result page template and the form result.
         :return: result.tpl and activity list or city list
     """
-    result = request.forms.get('activity')
+    result = request.forms.get('activities')
     if result is None:
         return template('website/result', listeResult = find_activity_from_city_zip_code(request.forms.get('city')))
     else:
