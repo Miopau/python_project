@@ -35,20 +35,19 @@
         <h1>Rechercher une installation</h1>
     </div>
 
-
+<div class="row">
     <div class="col-md-6 borders">
-        <form class="form-horizontal" action="search" method="post">
+        <form class="form-horizontal" action="result" method="post">
             <fieldset>
                 <legend>Recherche par activité</legend>
                 <div class="form-group">
                     <label for="select" class="col-lg-2 control-label">Activité</label>
                     <div class="col-lg-10">
-                        <select class="form-control" name="activite">
-                            <option>Football</option>
-                            <option>VolleyBall</option>
-                            <option>Tennis</option>
-                            <option>Rugby</option>
-                            <option>Curling</option>
+                        <select class="form-control" name="var">
+                            %for obj in list:
+                                <option>{{obj}}</option>
+                            %end
+
                         </select>
                     </div>
                 </div>
@@ -63,13 +62,13 @@
     </div>
 
     <div class="col-md-6">
-            <form class="form-horizontal" action="search" method="post">
+            <form class="form-horizontal" action="result" method="post">
                 <fieldset>
                     <legend>Recherche par ville</legend>
                     <div class="form-group">
                         <label for="example-text-input" class="col-lg-2 control-label">Ville</label>
                         <div class="col-lg-10">
-                            <input class="form-control" type="text" id="example-text-input">
+                            <input class="form-control" type="text" id="example-text-input" name="var">
                         </div>
                     </div>
                     <div class="form-group">
@@ -80,8 +79,7 @@
                 </fieldset>
             </form>
     </div>
-    <div class="modal-body row">
-    </div>
+</div>
 </div>
 </body>
 </html>

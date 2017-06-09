@@ -52,7 +52,7 @@ def list_activity():
         conn = sqlite3.connect('{}/../data/project_database.db'.format(dir_path))
         cursor = conn.cursor()
 
-        cursor.execute("""SELECT distinct name FROM activity""")
+        cursor.execute("""SELECT distinct name FROM activity ORDER BY name""")
 
         for row in cursor:
             list.append(row[0])

@@ -1,20 +1,18 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 from bottle import get, post, request, run, route, template, static_file
-
-
+from database_script import list_activity, find_activity_from_city_zip_code
 @get('/index')
 def index():
     return template('website/index')
 
 @get('/search')
 def index():
-    return template('website/search', activite = 'test')
+    return template('website/search', list =list_activity() )
 
-@post('/search')
+@post('/result')
 def do_post():
-    activite = request.forms.get('activite')
-    return template('website/search', activite=activite)
+    return template('website/result', liste = find_activity_from_city_zip_code(request.forms.get('var')))
 
 @route("/website/theme/<filename>")
 def style(filename):
