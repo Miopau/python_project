@@ -58,5 +58,14 @@
 
 </div>
 </div>
+
+<div class="footer" style="clear: both;">
+   <small>
+      <center>
+         <hr/>
+         Le site utilise <a href="http://getbootstrap.com" target="_blank">Bootstrap</a> ainsi que le thème <a target="_blank" href="http://bootswatch.com/yeti/">Yeti</a>.
+         <br/>Développé par <a href ="https://www.linkedin.com/in/florian-vallet-593020120/" target="_blank">Florian Vallet</a> et <a href ="http://matthieubernard.me" target="_blank">Matthieu Bernard</a> !<br/>
+   </small>
+
 </body>
 </html>
