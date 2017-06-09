@@ -46,12 +46,14 @@
     </div>
 
     %for elem in liste:
-        <div class="panel panel-default">
-            <div class="panel-body">
-                <span class="pull-left glyphicon glyphicon-home"></span><h3>{{elem[O]}}</h3></br>
-                <p>elem[1]</p>
+        %for obj in elem:
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    <span class="pull-left glyphicon glyphicon-home"></span><h3>{{obj[0]}}</h3></br>
+                    <p>{{obj[1]}}</p>
+                </div>
             </div>
-        </div>
+        %end
     %end
 </div>
 </body>
