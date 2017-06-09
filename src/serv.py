@@ -13,10 +13,11 @@ def index():
 @post('/result')
 def do_post():
     res = request.forms.get('var')
-    print res
     if res is None:
+        print (request.forms.get('var'))
         return template('website/result', liste = find_activity_from_city_zip_code(request.forms.get('city')))
     else:
+        print (request.forms.get('var'))
         return template('website/result', liste = get_city(request.forms.get('var')))
 
 @route("/website/theme/<filename>")
