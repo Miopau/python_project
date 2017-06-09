@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 from bottle import get, post, request, run, route, template, static_file
-from database_script import list_activity, find_activity_from_city_zip_code, get_city
+from query import list_activity, find_activity_from_city_zip_code, get_city
 
 @get('/index')
 def index():
@@ -9,15 +9,15 @@ def index():
 
 @get('/search')
 def index():
-    return template('website/search', list =list_activity() )
+    return template('website/search', activity =list_activity() )
 
 @post('/result')
 def do_post():
-    res = request.forms.get('var')
-    if res is None:
-        return template('website/result', liste = find_activity_from_city_zip_code(request.forms.get('city')))
+    result = request.forms.get('var')
+    if result is None:
+        return template('website/result', listeResult = find_activity_from_city_zip_code(request.forms.get('city')))
     else:
-        return template('website/result', liste = get_city(request.forms.get('var')))
+        return template('website/result', listeResult = get_city(request.forms.get('activities')))
 
 @route("/website/theme/<filename>")
 def style(filename):

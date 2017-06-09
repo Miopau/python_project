@@ -37,21 +37,21 @@
         <h1>Résultat de la recherche</h1>
     </div>
 
-    %for elem in liste:
-        %if len(elem) == 4:
+    %for result in listeResult:
+        %if len(result) == 4:
             <div class="panel panel-default">
                 <div class="panel-body">
-                    <span class="glyphicon glyphicon-home"></span><h3>{{elem[0]}}</h3></br>
-                    <p>{{elem[1]}}</p>
-                    <p>{{elem[2]}}</p>
-                    <p>{{elem[3]}}</p>
+                    <span class="glyphicon glyphicon-home"></span><h3>{{result[0]}}</h3></br>
+                    <p>{{result[1]}}</p>
+                    <p>{{result[2]}}</p>
+                    <p>{{result[3]}}</p>
 
                 </div>
             </div>
         %else:
             <div class="panel panel-default">
                 <div class="panel-body">
-                    <span class="glyphicon glyphicon-tower"></span><h3>{{elem}}</h3></br>
+                    <span class="glyphicon glyphicon-tower"></span><h3>{{result}}</h3></br>
                 </div>
             </div>
     %end

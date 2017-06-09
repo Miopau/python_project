@@ -7,13 +7,12 @@ from Activity import Activity
 from Activity_Equipement import Activity_Equipement
 
 
-"""
-Function to read installation.csv file and create a list
-of installation object to fill the database
-"""
+
 
 def readcsv_installation():
     """
+    Function to read installation.csv file and create a list
+    of installation object to fill the database
     >>> not readcsv_installation()
     False
     """

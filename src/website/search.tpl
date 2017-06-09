@@ -43,9 +43,9 @@
                 <div class="form-group">
                     <label for="select" class="col-lg-2 control-label">Activité</label>
                     <div class="col-lg-10">
-                        <select class="form-control" name="var">
-                            %for obj in list:
-                                <option>{{obj}}</option>
+                        <select class="form-control" name="activities">
+                            %for result in activity:
+                                <option>{{result}}</option>
                             %end
 
                         </select>
