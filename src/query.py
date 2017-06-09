@@ -44,11 +44,12 @@ def find_activity_from_city_zip_code(var):
         conn.close()
         return list
 
-"""
-    function to get all activity
-    :return: list of activity
-"""
+
 def list_activity():
+    """
+        function to get all activity
+        :return: list of activity
+    """
     try:
         conn = sqlite3.connect('{}/../data/project_database.db'.format(dir_path))
         cursor = conn.cursor()
@@ -67,11 +68,12 @@ def list_activity():
         conn.close()
         return list
 
-"""
-    function to get all city from activity
-    :return: list of city
-"""
+
 def get_city(activity):
+    """
+        function to get all city from activity
+        :return: list of city
+    """
     try:
         conn = sqlite3.connect('{}/../data/project_database.db'.format(dir_path))
         cursor = conn.cursor()
@@ -98,11 +100,12 @@ def get_city(activity):
         conn.close()
         return list
 
-"""
-    function to get latitude and longitude for activity
-    :return: list latitude and longitude
-"""
+
 def get_coord(city,adress,zipcode,name):
+    """
+        function to get latitude and longitude for activity
+        :return: list latitude and longitude
+    """
     try:
         conn = sqlite3.connect('{}/../data/project_database.db'.format(dir_path))
         cursor = conn.cursor()
